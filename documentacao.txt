@@ -1,0 +1,34 @@
+ID = CT-07
+
+Função testada=    def dividir(a: float, b: float) -> float:
+                        if b == 0:
+                            raise ValueError("Divisão por zero não é permitida.")
+                        return a / b
+
+Objetivo= Testar se a exceção é funcional
+
+Entradas=   def test_dividir_por_zero_levanta_excecao():
+                with pytest.raises(ValueError):
+                    dividir(6, 0)
+
+Resultado esperado= Quando dividir por zero, a mensagem deve ser apresentada
+
+
+-----------------------------------------------------------------------------------------------------
+ID = CT-08
+
+Função testada=    def dividir(a: float, b: float) -> float:
+                        if b == 0:
+                            raise ValueError("Divisão por zero não é permitida.")
+                        return a / b
+
+Objetivo= Testar se a a função é funcional
+
+Entradas=    def test_dividir_positivos_resultado_inteiro():
+                assert dividir(8, 2) == 4
+
+Resultado esperado= Quando dividir dois números positivos sendo multiplo, resultado positivo inteiro
+
+Técnica= pytest
+
+Tipo= automata
